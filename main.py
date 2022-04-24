@@ -5,9 +5,9 @@ from ctypes import *
 from ctypes.util import find_library
 
 so='''
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+#include <~/home/john/cv/libc6-dev/usr/include/stdio.h>
+#include <~/home/john/cv/libc6-dev/usr/include/stdlib.h>
+#include <~/home/john/cv/libc6-dev/usr/include/unistd.h>
 
 void gconv() {}
 void gconv_init() {
