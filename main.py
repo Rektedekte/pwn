@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os
 from ctypes import *
 from ctypes.util import find_library
